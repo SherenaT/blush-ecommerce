@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.css";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/main-pages/Home";
+import ViewAllProducts from "./components/main-pages/ViewAllProducts";
+import HeadBandsOnly from "./components/main-pages/HeadBandsOnly";
+import BachelorettePage from "./components/main-pages/BachelorettePage";
+import ViewCart from "./components/ViewCart";
+import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
+  const handleUnderConstruction = function () {
+    alert("This Section is Currently under construction, will update soon.");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="body">
+        <br />
+        <Header />
+        <br />
+        {/* <Home /> */}
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/ViewAllProducts" component={ViewAllProducts} />
+          <Route path="/HeadBandsOnly" component={HeadBandsOnly} />
+          <Route path="/BachelorettePage" component={BachelorettePage} />
+          <Route path="/BachelorettePage" component={BachelorettePage} />
+          <Route path="/ViewCart" component={ViewCart} />
+          <br />
+        </Switch>
+        <Footer handleUnderConstruction={handleUnderConstruction} />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
