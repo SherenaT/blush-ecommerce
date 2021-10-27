@@ -2,8 +2,12 @@ import "./footer.css";
 import React from "react";
 
 const Footer = (props) => {
+  const handleUnderConstruction = function () {
+    alert("This Section is Currently under construction, will update soon.");
+  };
+
   return (
-    <div className="footer" onClick={props.handleUnderConstruction}>
+    <div className="footer" onClick={handleUnderConstruction}>
       <ul className="rows">
         <h3>Orders</h3>
         <li>Shipping</li>
@@ -48,7 +52,7 @@ const Footer = (props) => {
           className="footerInput"
           type="text"
           name="name"
-          placeholder="Enter your Email Address:"
+          placeholder="Enter your Email Address here"
         />
       </div>
     </div>

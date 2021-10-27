@@ -6,13 +6,11 @@ import Home from "./components/main-pages/Home";
 import ViewAllProducts from "./components/main-pages/ViewAllProducts";
 import HeadBandsOnly from "./components/main-pages/HeadBandsOnly";
 import BachelorettePage from "./components/main-pages/BachelorettePage";
-import ViewCart from "./components/ViewCart";
+import ViewCart from "./components/checkout/ViewCart";
+import AddressForm from "./components/checkout/AddressForm";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const handleUnderConstruction = function () {
-    alert("This Section is Currently under construction, will update soon.");
-  };
   return (
     <Router>
       <div className="body">
@@ -27,9 +25,10 @@ const App = () => {
           <Route path="/BachelorettePage" component={BachelorettePage} />
           <Route path="/BachelorettePage" component={BachelorettePage} />
           <Route path="/ViewCart" component={ViewCart} />
+          <Route path="/AddressForm" component={AddressForm} />
           <br />
         </Switch>
-        <Footer handleUnderConstruction={handleUnderConstruction} />
+        <Footer />
       </div>
     </Router>
   );

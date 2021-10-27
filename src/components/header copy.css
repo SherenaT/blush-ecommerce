@@ -1,0 +1,51 @@
+.header {
+  background-color: rgb(255, 255, 254);
+  border-bottom: 5px solid #9d8189;
+  padding: 10px 15px 20px 15px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 6em;
+  padding: 10px 0px;
+}
+/* .icons {
+  text-align: left;
+} */
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navlinks {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.rowGroup {
+  width: 80%;
+}
+
+#icons {
+  padding: 0 15px;
+  flex-direction: row;
+}
+
+li {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 25px;
+}
+/* a:hoover {
+  size: 100px;
+} */

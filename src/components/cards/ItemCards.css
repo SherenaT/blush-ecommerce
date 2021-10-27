@@ -1,11 +1,31 @@
+.itemRow {
+  margin-top: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: calc(-1em);
+}
+.itemSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .itemCards {
   background-color: rgb(255, 255, 254);
   padding: 3em 1em 2em 1em;
   border: 2px solid #9d8189;
   border-radius: 2em;
-  width: 30%;
-  height: 400px;
   margin: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mouseBtn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +41,7 @@
 .description {
   font-size: 20px;
   font-family: "Yanone Kaffeesatz", sans-serif;
-  margin-top: calc(-0.25em);
+  padding: 0 40px;
 }
 
 .price {
@@ -34,4 +54,22 @@
 .imgProduct {
   padding: 0 1em;
   max-height: 125px;
+}
+
+.mouseOverBtn {
+  background-color: #c4adb4de;
+  border: 3px solid hsl(343, 15%, 63%);
+  border-radius: 2em;
+  padding: 0 5em;
+  font-size: 1.5em;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  height: 2em;
+}
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: "100px";
+  height: "25px";
 }

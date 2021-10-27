@@ -1,0 +1,44 @@
+.addressForm {
+  padding-top: 25%;
+  padding-bottom: 25%;
+  background-color: white;
+}
+
+.cartH2 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  margin: auto;
+}
+.formRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+}
+.formDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+}
+.formBtn {
+  width: 75%;
+  background-color: rgba(0, 0, 255, 0.8);
+  padding: 0.75em 0;
+  border-radius: 2em;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.addressFormInput {
+  margin: 1em 1em;
+  padding: 5px;
+  border: 2px solid rgb(174, 174, 174);
+  text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.5em;
+  width: 75%;
+}
