@@ -22,10 +22,19 @@ Values('The Charlotte', 'Floral', 'Fuschia', 'Headband', 'one size', 'Floral Kno
 ('The Kimberly', 'Floral', 'Red', 'Headband', 'one size', 'Floral Knotted Headband with cushioned ends.', 12.99, 'images/headband/The-Kimberly.jpg'), 
 ('The Rosa', 'Floral', 'Yellow', 'Headband', 'one size', 'Floral Knotted Headband with cushioned ends.', 12.99, 'images/headband/The-Rosa.jpg'), 
 ('The Madison', 'Floral', 'Light Blue', 'Headband', 'one size', 'Floral Knotted Headband with cushioned ends.', 12.99, 'images/headband/The-Madison.jpg'),
-('The Harley', 'Floral', 'Yellow', 'Headband', 'one size', 'Floral Knotted Headband with cushioned ends.', 12.99, 'images/headband/The-Harley.jpg')
-('Cosmetic Bag', 'Personalized', 'Natural', 'Bachelorette', 'one size', 'Personalized cosmetic bags.', 12.99, 'images/bachelorette/cosmetic_bags.jpeg')
-('Tank Tops', 'Personalized', 'Black', 'Bachelorette', '15.99', 'Personalized tank tops with Taylor Swift quotes.', 12.99, 'images/bachelorette/tank-top.jpeg')
-('', 'Personalized', '', 'Bachelorette', '', 'Personalized .', 12.99, 'images/bachelorette/.jpeg')
-('', 'Personalized', '', 'Bachelorette', '', 'Personalized .', 12.99, 'images/bachelorette/.jpeg')
+('The Harley', 'Floral', 'Yellow', 'Headband', 'one size', 'Floral Knotted Headband with cushioned ends.', 12.99, 'images/headband/The-Harley.jpg'),
+('Cosmetic Bag', 'Personalized', 'Natural', 'Bachelorette', 'one size', 'Personalized cosmetic bags.', 12.99, 'images/bachelorette/cosmetic_bags.jpeg'),
+('Tank Tops', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Personalized tank tops with Taylor Swift quotes.', 20.99, 'images/bachelorette/tank-top.jpeg'),
+('Wifey Pullover', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Wifey" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-black1.jpg'), 
+('Bachelorette Pullover', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Bachelorette" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-black2.jpg'), 
+('Bride to Be Pullover', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Bride to Be Pullover" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-black3.jpg'),
+('Future Mrs Pullover', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Future Mrs" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-black4.jpg'),
+('Bachelorette Pullover', 'Personalized', 'White', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Bachelorette" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-White-1.jpg'),
+('Bachelorette Pullover', 'Personalized', 'White', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Bachelorette" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-White-1.jpg'),
+('Friends Style Pullover', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Friends Style" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-White-3.jpg'),
+('Bride to Be Pullover', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Bride to Be" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-White-4.jpg'),
+('Wifey Pullover', 'Personalized', 'White', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Wifey" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-White-wifey-01.jpg'), 
+('Future Mrs Pullover', 'Personalized', 'Black', 'Bachelorette', 'S · M · L · XL', 'Crewneck "Future Mrs" Pullover.', 40.99, 'images/bachelorette/Sweatshirt-White-5.jpg')
+
 
 

@@ -8,6 +8,7 @@ import HeadBandsOnly from "./components/main-pages/HeadBandsOnly";
 import BachelorettePage from "./components/main-pages/BachelorettePage";
 import ViewCart from "./components/checkout/ViewCart";
 import AddressForm from "./components/checkout/AddressForm";
+import ReviewOrder from "./components/checkout/ReviewOrder";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/BachelorettePage" component={BachelorettePage} />
           <Route path="/ViewCart" component={ViewCart} />
           <Route path="/AddressForm" component={AddressForm} />
+          <Route path="/ReviewOrder" component={ReviewOrder} />
           <br />
         </Switch>
         <Footer />

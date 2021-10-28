@@ -1,10 +1,12 @@
 .addressForm {
-  padding-top: 25%;
-  padding-bottom: 25%;
+  padding-top: 17%;
+  padding-bottom: 10%;
   background-color: white;
 }
-
-.cartH2 {
+form {
+  margin: 0 3em;
+}
+.formH2 {
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-align: center;
   font-size: 30px;

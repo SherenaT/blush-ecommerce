@@ -1,10 +1,11 @@
 import "./AddressForm.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const AddressForm = () => {
   return (
     <div className="addressForm">
-      <h2 className="cartH2">Shipping Address:</h2>
+      <h2 className="formH2">Shipping Address:</h2>
       <form>
         <div className="formRow">
           <input
@@ -131,7 +132,9 @@ const AddressForm = () => {
           </select>
         </div>
         <div className="formDiv">
-          <button className="formBtn">Proceed to Check Out</button>
+          <Link to="/ReviewOrder" className="formLink">
+            <button className="formBtn">Proceed to Check Out</button>
+          </Link>
         </div>
       </form>
     </div>
