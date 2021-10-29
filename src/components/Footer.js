@@ -33,13 +33,13 @@ const Footer = (props) => {
         <li>Jobs</li>
       </ul>
       <div className="rows iconsFooter">
-        <i class="large facebook icon"></i>
+        <i className="large facebook icon"></i>
         <br />
-        <i class="large instagram icon"></i>
+        <i className="large instagram icon"></i>
         <br />
-        <i class="large pinterest icon"></i>
+        <i className="large pinterest icon"></i>
         <br />
-        <i class="large twitter icon"></i>
+        <i className="large twitter icon"></i>
       </div>
       <div className="rows customerLetter">
         <h3>We want you on our list!</h3>

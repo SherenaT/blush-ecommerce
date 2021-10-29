@@ -1,8 +1,6 @@
 import "./ViewAllProducts.css";
-import ItemCards from "../cards/ItemCards";
-import CardList from "../cards/CardList";
-
 import React from "react";
+import CardList from "../cards/ViewAllCards/CardList";
 
 const ViewAllProducts = () => {
   return (

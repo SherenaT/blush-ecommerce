@@ -14,6 +14,8 @@
   align-items: center;
 }
 .itemCards {
+  text-decoration: none;
+  color: black;
   background-color: rgb(255, 255, 254);
   padding: 3em 1em 2em 1em;
   border: 2px solid #9d8189;

@@ -1,5 +1,5 @@
 .reviewOrder {
-  padding-top: 17%;
+  padding-top: 15%;
   padding-bottom: 10%;
   background-color: white;
 }
@@ -11,10 +11,10 @@
   border: 2px solid rgb(174, 174, 174);
   width: 55%;
   margin: auto;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   padding: 2em 0;
 }
 .reviewH2 {
-  font-family: "Yanone Kaffeesatz", sans-serif;
   text-align: center;
   font-size: 30px;
 }
@@ -62,4 +62,9 @@ img {
   border-radius: 2em;
   font-size: 1.5em;
   font-weight: 600;
+}
+.angle {
+  padding-left: 1em;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.25em;
 }

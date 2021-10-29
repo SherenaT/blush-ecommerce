@@ -1,20 +1,73 @@
 import "./AddressForm.css";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const AddressForm = () => {
+  const history = useHistory();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [address2, setAddress2] = useState("");
+  const [city, setCity] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [state, setState] = useState("");
+  const [country, setCountry] = useState("");
+
+  function goBackHandle() {
+    history.goBack();
+  }
+  const handleFirstName = (e) => {
+    setFirstName(e.target.value);
+  };
+  const handleLastName = (e) => {
+    setLastName(e.target.value);
+  };
+  const handleCompany = (e) => {
+    setCompany(e.target.value);
+  };
+  const handlePhoneNumber = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+  const handleAddress = (e) => {
+    setAddress(e.target.value);
+  };
+  const handleAddress2 = (e) => {
+    setAddress2(e.target.value);
+  };
+  const handleCity = (e) => {
+    setCity(e.target.value);
+  };
+  const handleZipCode = (e) => {
+    setZipCode(e.target.value);
+  };
+  const handleState = (e) => {
+    setState(e.target.value);
+  };
+  const handleCountry = (e) => {
+    setCountry(e.target.value);
+  };
+
   return (
     <div className="addressForm">
+      <i class="angle left icon" onClick={goBackHandle}>
+        Back
+      </i>
       <h2 className="formH2">Shipping Address:</h2>
       <form>
         <div className="formRow">
           <input
+            onChange={handleFirstName}
+            value={firstName}
             className="addressFormInput"
             type="text"
             name="name"
             placeholder="First Name"
           />
           <input
+            onChange={handleLastName}
+            value={lastName}
             className="addressFormInput"
             type="text"
             name="name"
@@ -23,12 +76,16 @@ const AddressForm = () => {
         </div>
         <div className="formRow">
           <input
+            onChange={handleCompany}
+            value={company}
             className="addressFormInput"
             type="text"
             name="name"
             placeholder="Company (Optional)"
           />
           <input
+            onChange={handlePhoneNumber}
+            value={phoneNumber}
             className="addressFormInput"
             type="text"
             name="name"
@@ -37,6 +94,8 @@ const AddressForm = () => {
         </div>
         <div className="formRow">
           <input
+            onChange={handleAddress}
+            value={address}
             className="addressFormInput"
             type="text"
             name="name"
@@ -45,6 +104,8 @@ const AddressForm = () => {
         </div>
         <div className="formRow">
           <input
+            onChange={handleAddress2}
+            value={address2}
             className="addressFormInput"
             type="text"
             name="name"
@@ -54,12 +115,16 @@ const AddressForm = () => {
 
         <div className="formRow">
           <input
+            onChange={handleCity}
+            value={city}
             className="addressFormInput"
             type="text"
             name="name"
             placeholder="City"
           />
           <input
+            onChange={handleZipCode}
+            value={zipCode}
             className="addressFormInput"
             type="text"
             name="name"
@@ -67,7 +132,13 @@ const AddressForm = () => {
           />
         </div>
         <div className="formRow">
-          <select className="addressFormInput" type="text" name="name">
+          <select
+            onChange={handleState}
+            value={state}
+            className="addressFormInput"
+            type="text"
+            name="name"
+          >
             <option>Select State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -77,7 +148,6 @@ const AddressForm = () => {
             <option value="CO">Colorado</option>
             <option value="CT">Connecticut</option>
             <option value="DE">Delaware</option>
-            <option value="DC">District Of Columbia</option>
             <option value="FL">Florida</option>
             <option value="GA">Georgia</option>
             <option value="HI">Hawaii</option>
@@ -121,7 +191,13 @@ const AddressForm = () => {
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </select>
-          <select className="addressFormInput" type="text" name="name">
+          <select
+            onChange={handleCountry}
+            value={country}
+            className="addressFormInput"
+            type="text"
+            name="name"
+          >
             <option>Select Country</option>
             <option value="AS">American Samoa</option>
             <option value="GU">Guam</option>
@@ -142,3 +218,11 @@ const AddressForm = () => {
 };
 
 export default AddressForm;
+
+// const [firstName, setFirstName] = useState("");
+
+// const handleFirstName = (e) => {
+//   setFirstName(e.target.value);
+// };
+// onChange={handleFirstName}
+//         value={firstName}

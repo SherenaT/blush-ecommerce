@@ -1,10 +1,19 @@
 import "./ReviewOrder.css";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const ReviewOrder = () => {
+  const history = useHistory();
+
+  function goBackHandle() {
+    history.goBack();
+  }
+
   return (
     <div className="reviewOrder">
+      <i class="angle left icon" onClick={goBackHandle}>
+        Back
+      </i>
       <div className="reviewDiv">
         <h2 className="reviewH2">Order Summary</h2>
         <div className="reviewRow">

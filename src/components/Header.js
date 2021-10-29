@@ -15,10 +15,10 @@ const Header = () => {
             <li className="liNav">View All Prodcts</li>
           </Link>
           <Link to="/HeadBandsOnly">
-            <li className="liNav">Head Bands only</li>
+            <li className="liNav">Head Bands</li>
           </Link>
           <Link to="/BachelorettePage">
-            <li className="liNav">Bachelorette Party Goodies</li>
+            <li className="liNav">Bachelorette Goodies</li>
           </Link>
         </ul>
 

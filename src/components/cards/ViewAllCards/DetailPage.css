@@ -1,0 +1,50 @@
+.detailPage {
+  padding-bottom: 10%;
+  background-color: white;
+  padding: 17% 10% 10% 10%;
+}
+
+.detailFlexDiv {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailColumnDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imgDetail {
+  height: 90%;
+}
+.quantityDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  border: 2px solid #9d8189;
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 10px;
+}
+.qtyBtn {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  outline: inherit;
+}
+.addToCartBtn {
+  background-color: #9d8189;
+  font-size: 1.5em;
+  width: 70%;
+  border: 2px solid #9d8189;
+  border-radius: 2em;
+  cursor: pointer;
+  outline: inherit;
+  font-size: 1.5em;
+  padding: 0.25em 0;
+}
