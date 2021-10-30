@@ -4,10 +4,12 @@ import ItemCards from "./BacheloretteItemCards";
 
 const CardList = () => {
   const [allProducts, setAllProducts] = useState([]);
-  useEffect(() =>
-    axios.get("/api/bachelorette").then((res) => {
-      setAllProducts(res.data);
-    })
+  useEffect(
+    () =>
+      axios.get("/api/bachelorette").then((res) => {
+        setAllProducts(res.data);
+      }),
+    []
   );
   return (
     <div>
@@ -31,3 +33,6 @@ const CardList = () => {
 };
 
 export default CardList;
+
+// http://localhost:5051/images/headband/The-Charlotte.jpg
+// http://localhost:5051/item/Headband/images/headband/The-Charlotte.jpg

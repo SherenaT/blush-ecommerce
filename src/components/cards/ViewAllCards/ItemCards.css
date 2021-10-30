@@ -1,18 +1,18 @@
-.itemRow {
-  margin-top: 25%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: calc(-1em);
-}
 .itemSec {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  grid-template-rows: repeat(4fr, 1fr);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+/* .products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px;
+  grid-auto-rows: 60px;
+  grid-gap: 15px;
+} */
 .itemCards {
   background-color: rgb(255, 255, 254);
   padding: 3em 1em 2em 1em;
@@ -25,6 +25,7 @@
   align-items: center;
   text-align: center;
 }
+
 .mouseBtn {
   display: flex;
   flex-direction: column;
@@ -52,8 +53,8 @@
 }
 
 .imgProduct {
-  padding: 0 1em;
   max-height: 125px;
+  border: 2px solid black;
 }
 
 .mouseOverBtn {
@@ -72,4 +73,9 @@
   text-align: center;
   width: "100px";
   height: "25px";
+}
+.productLink,
+.productLink:hover {
+  color: black;
+  text-decoration: "none";
 }

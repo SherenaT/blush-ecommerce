@@ -26,8 +26,10 @@ const ItemCards = (props) => {
       onMouseLeave={() => {
         setHoover(false);
       }}
+      // style={{ display: "grid", gridTemplateColumns: "2fr 2fr" }}
     >
       <Link
+        className="productLink"
         to={{
           pathname: `/item/${department}/${name}`,
           state: {
@@ -44,13 +46,15 @@ const ItemCards = (props) => {
           },
         }}
       >
-        <div className="itemCards">
-          <img className="imgProduct" src={image} alt="item pic" />
-          <h3 className="itemName">{name}</h3>
-          <p className="description" style={{ width: "15em" }}>
-            Description: {description}
-          </p>
-          <h5 className="price">${price}</h5>
+        <div className="products">
+          <div className="itemCards">
+            <img className="imgProduct" src={image} alt={name} />
+            <h3 className="itemName">{name}</h3>
+            <p className="description" style={{ width: "15em" }}>
+              Description: {description}
+            </p>
+            <h5 className="price">${price}</h5>
+          </div>
         </div>
       </Link>
       {hoover ? (
@@ -63,3 +67,6 @@ const ItemCards = (props) => {
 };
 
 export default ItemCards;
+
+// display: grid;
+//   grid-template-columns: 1fr 1fr;

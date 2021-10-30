@@ -1,9 +1,10 @@
 import "./ReviewOrder.css";
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 
 const ReviewOrder = () => {
   const history = useHistory();
+  const location = useLocation();
 
   function goBackHandle() {
     history.goBack();
@@ -18,8 +19,23 @@ const ReviewOrder = () => {
         <h2 className="reviewH2">Order Summary</h2>
         <div className="reviewRow">
           <div className="reviewSec">
-            <h4 className="reviewH4">Address: </h4>
-            <p className="reviewP">address value</p>
+            <div className="reviewAddress">
+              <h4 className="reviewH4">Address: </h4>
+            </div>
+            <div className="reviewAddress">
+              <p className="reviewP">
+                {`${location.state.firstName} ${location.state.lastName}`}
+              </p>
+              <p className="reviewP">{location.state.company}</p>
+              <p className="reviewP">{`(${location.state.phoneNumber[0]}${location.state.phoneNumber[1]}${location.state.phoneNumber[2]})${location.state.phoneNumber[3]}${location.state.phoneNumber[4]}${location.state.phoneNumber[5]}-${location.state.phoneNumber[6]}${location.state.phoneNumber[7]}${location.state.phoneNumber[8]}${location.state.phoneNumber[9]}`}</p>
+              <p className="reviewP">
+                {`${location.state.address}, #${location.state.address2}`}
+              </p>
+              <p className="reviewP">
+                {`${location.state.city}, ${location.state.state}, 
+                ${location.state.zipCode}, ${location.state.country}`}
+              </p>
+            </div>
           </div>
         </div>
         <div className="reviewRow">
@@ -38,7 +54,7 @@ const ReviewOrder = () => {
             <p className="reviewP">Subtotal</p>
           </div>
           <div className="reviewSec">
-            <h4 className="reviewH4">Shipping</h4>
+            <h4 className="reviewH4">Shipping: </h4>
             <p className="reviewP">Shipping Value</p>
           </div>{" "}
           <div className="reviewSec">

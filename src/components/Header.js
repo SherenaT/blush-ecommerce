@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <h1>Blush</h1>
+      <Link to="/" className="linkH1">
+        <h1>Blush</h1>
+      </Link>
       <div className="nav">
         <ul className="navlinks">
           <Link to="/">

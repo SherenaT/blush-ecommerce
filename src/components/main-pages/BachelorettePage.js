@@ -1,4 +1,4 @@
-import "./BachelorettePage.css";
+import "./ViewAllProducts.css";
 import React from "react";
 import BacheloretteItemCards from "../cards/BacheloretteCardsOnly/BacheloretteCardList";
 

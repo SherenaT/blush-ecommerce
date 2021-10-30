@@ -14,6 +14,7 @@ app.get("/api/items", products.getAllProducts);
 app.get("/api/bachelorette", products.bachelorette);
 app.get("/api/headbands", products.headbands);
 
+// console.log("testing");
 massive({
   connectionString: CONNECTION_STRING,
   ssl: {

@@ -6,7 +6,7 @@ const ViewAllProducts = () => {
   return (
     <div className="viewAllProducts">
       <h2>View All Products</h2>
-      <div className="itemsRow">
+      <div>
         <CardList />
       </div>
     </div>

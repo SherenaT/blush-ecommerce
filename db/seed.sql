@@ -1,3 +1,4 @@
+-- database URL postgres://ifhqveaffafxuh:0e05614de243a9ab445d0f999c7853f0953d623b9b425306723185e563cc2143@ec2-100-24-139-146.compute-1.amazonaws.com:5432/d8if4p3kr1bemm
 DROP TABLE item;
 
 CREATE TABLE "item" (

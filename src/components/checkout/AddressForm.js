@@ -20,6 +20,7 @@ const AddressForm = () => {
   }
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
+    console.log(firstName);
   };
   const handleLastName = (e) => {
     setLastName(e.target.value);
@@ -208,7 +209,24 @@ const AddressForm = () => {
           </select>
         </div>
         <div className="formDiv">
-          <Link to="/ReviewOrder" className="formLink">
+          <Link
+            className="formLink"
+            to={{
+              pathname: `/ReviewOrder`,
+              state: {
+                firstName: firstName,
+                lastName: lastName,
+                company: company,
+                phoneNumber: phoneNumber,
+                address: address,
+                address2: address2,
+                city: city,
+                zipCode: zipCode,
+                state: state,
+                country: country,
+              },
+            }}
+          >
             <button className="formBtn">Proceed to Check Out</button>
           </Link>
         </div>
@@ -219,10 +237,14 @@ const AddressForm = () => {
 
 export default AddressForm;
 
-// const [firstName, setFirstName] = useState("");
-
-// const handleFirstName = (e) => {
-//   setFirstName(e.target.value);
-// };
-// onChange={handleFirstName}
-//         value={firstName}
+/*
+firstName:firstName,
+              lastName: lastName,
+              company: company,
+              phoneNumber: phoneNumber,
+              address: address,
+              address2: address2,
+              city: city,
+              zipCode: zipCode,
+              state: state,
+              country: country, */

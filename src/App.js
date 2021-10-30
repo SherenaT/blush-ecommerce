@@ -2,7 +2,7 @@ import "./app.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/main-pages/Home";
+import Home from "./components/home/Home";
 import ViewAllProducts from "./components/main-pages/ViewAllProducts";
 import HeadBandsOnly from "./components/main-pages/HeadBandsOnly";
 import BachelorettePage from "./components/main-pages/BachelorettePage";

@@ -1,5 +1,5 @@
-import "./HeadBandsOnly.css";
 import React from "react";
+import "./ViewAllProducts.css";
 import HeadbandsItemCards from "../cards/HeadbandCardsOnly/HeadbandsCardList";
 
 const HeadBandsOnly = () => {

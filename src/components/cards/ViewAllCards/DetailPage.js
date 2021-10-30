@@ -36,8 +36,8 @@ const DetailPage = () => {
             <div className="detailColumnDiv">
               <img
                 className="imgDetail"
-                src={location.state.image}
-                alt="item pic"
+                src={`/${location.state.image}`}
+                alt="{location.state.name}"
               />
             </div>
             <div className="detailColumnDiv">

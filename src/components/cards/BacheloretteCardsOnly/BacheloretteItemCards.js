@@ -1,4 +1,4 @@
-import "./BacheloretteItemCards.css";
+import "../ViewAllCards/ItemCards.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ const ItemCards = (props) => {
         setHoover(false);
       }}
     >
-      <Link className="itemLink" to="/DetailPage">
+      <Link className="productLink" to="/DetailPage">
         <div className="itemCards">
           <img className="imgProduct" src={image} alt="item pic" />
           <h3 className="itemName">{name}</h3>

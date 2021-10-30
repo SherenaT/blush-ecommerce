@@ -14,38 +14,28 @@
   font-family: "Yanone Kaffeesatz", sans-serif;
   padding: 2em 0;
 }
-.reviewH2 {
-  text-align: center;
-  font-size: 30px;
-}
 
-.reviewH4,
-img {
+.reviewH4 {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  text-align: left;
   font-size: 2em;
-  padding-right: 3em;
+  margin-right: 3em;
 }
 .reviewP {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  text-align: left;
+  text-align: right;
+  margin-left: 3em;
   font-size: 1.5em;
-  margin: auto;
-  padding-left: 3em;
 }
 .reviewRow {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
 }
+
 .reviewCol {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  text-align: right;
 }
 .reviewSec {
   display: flex;

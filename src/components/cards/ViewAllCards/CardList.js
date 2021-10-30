@@ -4,10 +4,12 @@ import ItemCards from "./ItemCards";
 
 const CardList = () => {
   const [allProducts, setAllProducts] = useState([]);
-  useEffect(() =>
-    axios.get("/api/items").then((res) => {
-      setAllProducts(res.data);
-    })
+  useEffect(
+    () =>
+      axios.get("/api/items").then((res) => {
+        setAllProducts(res.data);
+      }),
+    []
   );
   return (
     <div>

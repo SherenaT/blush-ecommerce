@@ -4,10 +4,12 @@ import ItemCards from "./HeadbandsItemCards";
 
 const HeadbandsCardList = () => {
   const [allProducts, setAllProducts] = useState([]);
-  useEffect(() =>
-    axios.get("/api/headbands").then((res) => {
-      setAllProducts(res.data);
-    })
+  useEffect(
+    () =>
+      axios.get("/api/headbands").then((res) => {
+        setAllProducts(res.data);
+      }),
+    []
   );
   return (
     <div>
