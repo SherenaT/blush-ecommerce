@@ -1,9 +1,7 @@
 .viewAllProducts,
 .headBandsOnly,
 .bachelorettePage {
-  margin-top: 15%;
-  padding: 10px 25px;
-  padding-bottom: 20px;
+  margin: 15% 10% 5% 10%;
 }
 
 h2 {

@@ -3,7 +3,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const HeadbandsItemCards = (props) => {
-  const { key, name, price, image, description } = props;
+  const {
+    sku,
+    name,
+    print,
+    color,
+    category,
+    department,
+    size,
+    description,
+    price,
+    image,
+  } = props;
   const [hoover, setHoover] = useState(false);
 
   return (
@@ -16,7 +27,24 @@ const HeadbandsItemCards = (props) => {
         setHoover(false);
       }}
     >
-      <Link className="productLink" to="/DetailPage">
+      <Link
+        className="productLink"
+        to={{
+          pathname: `/item/${department}/${name}`,
+          state: {
+            sku: sku,
+            name: name,
+            print: print,
+            color: color,
+            category: category,
+            department: department,
+            size: size,
+            description: description,
+            price: price,
+            image: image,
+          },
+        }}
+      >
         <div className="itemCards">
           <img className="imgProduct" src={image} alt="item pic" />
           <h3 className="itemName">{name}</h3>

@@ -9,6 +9,13 @@ const ReviewOrder = () => {
   function goBackHandle() {
     history.goBack();
   }
+  function handleAddress2() {
+    if (!location.state.address2) {
+      return "";
+    } else {
+      return "# " + location.state.address2;
+    }
+  }
 
   return (
     <div className="reviewOrder">
@@ -29,7 +36,7 @@ const ReviewOrder = () => {
               <p className="reviewP">{location.state.company}</p>
               <p className="reviewP">{`(${location.state.phoneNumber[0]}${location.state.phoneNumber[1]}${location.state.phoneNumber[2]})${location.state.phoneNumber[3]}${location.state.phoneNumber[4]}${location.state.phoneNumber[5]}-${location.state.phoneNumber[6]}${location.state.phoneNumber[7]}${location.state.phoneNumber[8]}${location.state.phoneNumber[9]}`}</p>
               <p className="reviewP">
-                {`${location.state.address}, #${location.state.address2}`}
+                {`${location.state.address}, ${handleAddress2()}`}
               </p>
               <p className="reviewP">
                 {`${location.state.city}, ${location.state.state}, 

@@ -12,7 +12,7 @@ const CardList = () => {
     []
   );
   return (
-    <div>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
       {allProducts.map((obj) => (
         <ItemCards
           key={obj.item_id}

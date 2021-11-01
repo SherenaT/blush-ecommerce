@@ -9,7 +9,7 @@ import BachelorettePage from "./components/main-pages/BachelorettePage";
 import ViewCart from "./components/checkout/ViewCart";
 import AddressForm from "./components/checkout/AddressForm";
 import ReviewOrder from "./components/checkout/ReviewOrder";
-import DetailPage from "./components/cards/ViewAllCards/DetailPage";
+import DetailPage from "./components/cards/DetailPage/DetailPage";
 import Footer from "./components/Footer";
 
 const App = () => {
