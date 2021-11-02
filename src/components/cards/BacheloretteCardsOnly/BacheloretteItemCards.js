@@ -46,10 +46,10 @@ const ItemCards = (props) => {
         }}
       >
         <div className="itemCards">
-          <img className="imgProduct" src={image} alt="item pic" />
+          <img className="imgProduct" src={image} alt={`{name} {department}`} />
           <h3 className="itemName">{name}</h3>
           <p className="description" style={{ width: "15em" }}>
-            Description: {description}
+            {description}
           </p>
           <h5 className="price">${price}</h5>
         </div>

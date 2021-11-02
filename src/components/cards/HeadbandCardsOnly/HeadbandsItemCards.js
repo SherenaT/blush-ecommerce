@@ -49,7 +49,7 @@ const HeadbandsItemCards = (props) => {
           <img className="imgProduct" src={image} alt="item pic" />
           <h3 className="itemName">{name}</h3>
           <p className="description" style={{ width: "15em" }}>
-            Description: {description}
+            {description}
           </p>
           <h5 className="price">${price}</h5>
         </div>

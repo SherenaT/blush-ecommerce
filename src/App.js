@@ -10,6 +10,7 @@ import ViewCart from "./components/checkout/ViewCart";
 import AddressForm from "./components/checkout/AddressForm";
 import ReviewOrder from "./components/checkout/ReviewOrder";
 import DetailPage from "./components/cards/DetailPage/DetailPage";
+import CartQty from "./components/cards/ViewAllCards/CartQty";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/AddressForm" component={AddressForm} exact />
           <Route path="/ReviewOrder" component={ReviewOrder} exact />
           <Route path="/item/:department/:name" component={DetailPage} exact />
+          <Route path="/CartQty" component={CartQty} exact />
 
           <br />
         </Switch>

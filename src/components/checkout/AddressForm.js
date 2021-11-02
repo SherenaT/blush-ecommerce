@@ -50,6 +50,23 @@ const AddressForm = () => {
     setCountry(e.target.value);
   };
 
+  const handleMissingInformation = () => {
+    if (
+      !firstName ||
+      !lastName ||
+      !phoneNumber ||
+      !address ||
+      !city ||
+      !zipCode ||
+      !state ||
+      !country
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <div className="addressForm">
       <i class="angle left icon" onClick={goBackHandle}>
@@ -200,35 +217,34 @@ const AddressForm = () => {
             name="name"
           >
             <option>Select Country</option>
-            <option value="AS">American Samoa</option>
-            <option value="GU">Guam</option>
-            <option value="MP">Northern Mariana Islands</option>
+            <option value="USA">United States of America</option>
             <option value="PR">Puerto Rico</option>
-            <option value="UM">United States Minor Outlying Islands</option>
             <option value="VI">Virgin Islands</option>
           </select>
         </div>
         <div className="formDiv">
-          <Link
-            className="formLink"
-            to={{
-              pathname: `/ReviewOrder`,
-              state: {
-                firstName: firstName,
-                lastName: lastName,
-                company: company,
-                phoneNumber: phoneNumber,
-                address: address,
-                address2: address2,
-                city: city,
-                zipCode: zipCode,
-                state: state,
-                country: country,
-              },
-            }}
-          >
-            <button className="formBtn">Proceed to Check Out</button>
-          </Link>
+          {handleMissingInformation() && (
+            <Link
+              className="formLink"
+              to={{
+                pathname: `/ReviewOrder`,
+                state: {
+                  firstName: firstName,
+                  lastName: lastName,
+                  company: company,
+                  phoneNumber: phoneNumber,
+                  address: address,
+                  address2: address2,
+                  city: city,
+                  zipCode: zipCode,
+                  state: state,
+                  country: country,
+                },
+              }}
+            >
+              <button className="formBtn">Proceed to Check Out</button>
+            </Link>
+          )}
         </div>
       </form>
     </div>
@@ -236,15 +252,3 @@ const AddressForm = () => {
 };
 
 export default AddressForm;
-
-/*
-firstName:firstName,
-              lastName: lastName,
-              company: company,
-              phoneNumber: phoneNumber,
-              address: address,
-              address2: address2,
-              city: city,
-              zipCode: zipCode,
-              state: state,
-              country: country, */

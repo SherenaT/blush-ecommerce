@@ -26,11 +26,12 @@ const Header = () => {
 
         <div id="iconsHeader">
           <Link to="/ViewCart">
-            <i className="large shopping cart icon"></i>
+            1<i className="large shopping cart icon"></i>
           </Link>
           <i className="large search icon"></i>
         </div>
       </div>
+      <Link to="/CartQty">CartQty</Link>
     </div>
   );
 };
