@@ -1,7 +1,6 @@
 import "./ItemCards.css";
-import React, { useState, useLocation } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import CartQty from "./CartQty";
 
 const ItemCards = (props) => {
   const {
@@ -17,9 +16,40 @@ const ItemCards = (props) => {
     image,
   } = props;
   const [hoover, setHoover] = useState(false);
-  const location = useLocation();
 
-  // console.log(cart);
+  let [cart, setCart] = useState([]);
+
+  let localCart = localStorage.getItem("cart");
+
+  useEffect(() => {
+    localCart = JSON.parse(localCart);
+    if (localCart) {
+      setCart(localCart);
+    }
+  }, []);
+
+  let addToCart = (product) => {
+    let cartCopy = [...cart];
+    cartCopy.push(product);
+    setCart(cartCopy);
+
+    let stringCart = JSON.stringify(cartCopy);
+    localStorage.setItem("cart", stringCart);
+    window.location.reload();
+  };
+
+  let product = {
+    sku,
+    name,
+    print,
+    color,
+    category,
+    department,
+    size,
+    description,
+    price,
+    image,
+  };
 
   return (
     <div>
@@ -31,7 +61,6 @@ const ItemCards = (props) => {
         onMouseLeave={() => {
           setHoover(false);
         }}
-        // style={{ display: "grid", gridTemplateColumns: "2fr 2fr" }}
       >
         <Link
           className="productLink"
@@ -53,14 +82,12 @@ const ItemCards = (props) => {
         >
           <div className="products">
             <div className="itemCards">
-              <img className="imgProduct" src={image} alt={name} />
               <h3 className="itemName">{name}</h3>
+              <img className="imgProduct" src={image} alt={name} />
               <p className="description" style={{ width: "15em" }}>
                 {description}
               </p>
-              <h5 className="price">
-                ${price} test{image}
-              </h5>
+              <h5 className="price">${price}</h5>
             </div>
           </div>
         </Link>
@@ -71,7 +98,7 @@ const ItemCards = (props) => {
               type="button"
               value="Add to cart"
               onClick={() => {
-                props.addToCart();
+                addToCart(product);
               }}
             />
           </span>

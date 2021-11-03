@@ -1,11 +1,45 @@
 import "./DetailPage.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 
-const DetailPage = () => {
+const DetailPage = (props) => {
   const location = useLocation();
   const history = useHistory();
+
+  const {
+    sku,
+    name,
+    print,
+    color,
+    category,
+    department,
+    size,
+    description,
+    price,
+    image,
+  } = props;
+
   let [qty, setQty] = useState(1);
+  let [cart, setCart] = useState([]);
+
+  let localCart = localStorage.getItem("cart");
+
+  useEffect(() => {
+    localCart = JSON.parse(localCart);
+    if (localCart) {
+      setCart(localCart);
+    }
+  }, []);
+
+  let addToCart = (product) => {
+    let cartCopy = [...cart];
+    cartCopy.push(product);
+    setCart(cartCopy);
+
+    let stringCart = JSON.stringify(cartCopy);
+    localStorage.setItem("cart", stringCart);
+    window.location.reload();
+  };
 
   function goBackHandle() {
     history.goBack();
@@ -24,6 +58,18 @@ const DetailPage = () => {
     }
   };
 
+  let product = {
+    sku,
+    name,
+    print,
+    color,
+    category,
+    department,
+    size,
+    description,
+    price,
+    image,
+  };
   return (
     <>
       <div className="detailPage">
@@ -58,7 +104,14 @@ const DetailPage = () => {
                 </button>
               </div>
 
-              <button className="addToCartBtn">Add to cart</button>
+              <button
+                className="addToCartBtn"
+                onClick={() => {
+                  addToCart(product);
+                }}
+              >
+                Add to cart
+              </button>
             </div>
           </div>
         </div>

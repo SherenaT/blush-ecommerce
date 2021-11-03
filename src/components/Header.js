@@ -1,8 +1,26 @@
 import "./header.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  let [cart, setCart] = useState([]);
+
+  let localCart = localStorage.getItem("cart");
+
+  useEffect(() => {
+    localCart = JSON.parse(localCart);
+    if (localCart && localCart.length !== cart.length) {
+      setCart(localCart);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   localCart = JSON.parse(localCart);
+  //   if (localCart) {
+  //     setCart(localCart);
+  //   }
+  // });
+
   return (
     <div className="header">
       <Link to="/" className="linkH1">
@@ -23,15 +41,14 @@ const Header = () => {
             <li className="liNav">Bachelorette Goodies</li>
           </Link>
         </ul>
-
         <div id="iconsHeader">
-          <Link to="/ViewCart">
-            1<i className="large shopping cart icon"></i>
+          <Link to="/ViewCart" style={{ color: "black" }}>
+            {cart.length > 0 ? cart.length : ""}
+            <i className="large shopping cart icon"></i>
           </Link>
           <i className="large search icon"></i>
         </div>
       </div>
-      <Link to="/CartQty">CartQty</Link>
     </div>
   );
 };

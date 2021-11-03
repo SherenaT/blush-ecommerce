@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ItemCards from "./ItemCards";
-import { useLocation } from "react-router-dom";
 
 const CardList = (props) => {
   const [allProducts, setAllProducts] = useState([]);
-  const location = useLocation();
 
   useEffect(
     () =>
@@ -29,7 +27,6 @@ const CardList = (props) => {
           description={obj.item_description}
           price={obj.item_price}
           image={obj.item_pathway}
-          addToCart={props.addToCart}
         />
       ))}
     </div>
