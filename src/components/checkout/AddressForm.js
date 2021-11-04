@@ -20,7 +20,6 @@ const AddressForm = () => {
   }
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
-    console.log(firstName);
   };
   const handleLastName = (e) => {
     setLastName(e.target.value);
@@ -69,7 +68,7 @@ const AddressForm = () => {
 
   return (
     <div className="addressForm">
-      <i class="angle left icon" onClick={goBackHandle}>
+      <i className="angle left icon" onClick={goBackHandle}>
         Back
       </i>
       <h2 className="formH2">Shipping Address:</h2>

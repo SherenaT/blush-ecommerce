@@ -1,5 +1,5 @@
 import "../ViewAllCards/ItemCards.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const HeadbandsItemCards = (props) => {
@@ -16,6 +16,40 @@ const HeadbandsItemCards = (props) => {
     image,
   } = props;
   const [hoover, setHoover] = useState(false);
+
+  let [cart, setCart] = useState([]);
+
+  let localCart = localStorage.getItem("cart");
+
+  useEffect(() => {
+    localCart = JSON.parse(localCart);
+    if (localCart) {
+      setCart(localCart);
+    }
+  }, []);
+
+  let addToCart = (product) => {
+    let cartCopy = [...cart];
+    cartCopy.push(product);
+    setCart(cartCopy);
+
+    let stringCart = JSON.stringify(cartCopy);
+    localStorage.setItem("cart", stringCart);
+    window.location.reload();
+  };
+
+  let product = {
+    sku,
+    name,
+    print,
+    color,
+    category,
+    department,
+    size,
+    description,
+    price,
+    image,
+  };
 
   return (
     <div
@@ -56,7 +90,14 @@ const HeadbandsItemCards = (props) => {
       </Link>
       {hoover ? (
         <span>
-          <input className="mouseOverBtn" type="button" value="Add to cart" />
+          <input
+            className="mouseOverBtn"
+            type="button"
+            value="Add to cart"
+            onClick={() => {
+              addToCart(product);
+            }}
+          />
         </span>
       ) : null}
     </div>

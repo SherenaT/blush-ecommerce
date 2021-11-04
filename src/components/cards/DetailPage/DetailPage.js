@@ -73,7 +73,7 @@ const DetailPage = (props) => {
   return (
     <>
       <div className="detailPage">
-        <i class="angle left icon" onClick={goBackHandle}>
+        <i className="angle left icon" onClick={goBackHandle}>
           Back
         </i>
         <div className="detailDiv">

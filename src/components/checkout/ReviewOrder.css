@@ -1,5 +1,5 @@
 .reviewOrder {
-  padding-top: 15%;
+  padding-top: 12%;
   padding-bottom: 10%;
   background-color: white;
 }
@@ -15,36 +15,28 @@
   padding: 2em 0;
 }
 
+.reviewRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 3em;
+  margin-top: 1em;
+}
 .reviewH4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 2em;
-  margin-right: 3em;
 }
 .reviewP {
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-align: right;
-  margin-left: 3em;
-  font-size: 1.5em;
-}
-.reviewRow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-left: 3em;
+  font-size: 1.25em;
 }
 
-.reviewCol {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.reviewSec {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width: 65%;
-  padding-top: 1em;
-}
 .reviewBtn {
   width: 75%;
   background-color: rgba(0, 0, 255, 0.8);
@@ -52,9 +44,4 @@
   border-radius: 2em;
   font-size: 1.5em;
   font-weight: 600;
-}
-.angle {
-  padding-left: 1em;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: 1.25em;
 }

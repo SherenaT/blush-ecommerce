@@ -1,10 +1,65 @@
 import "./ReviewOrder.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 
 const ReviewOrder = () => {
   const history = useHistory();
   const location = useLocation();
+
+  function goBackHandle() {
+    history.goBack();
+  }
+  let [cart, setCart] = useState([]);
+  let localCart = localStorage.getItem("cart");
+
+  useEffect(() => {
+    localCart = JSON.parse(localCart);
+    if (localCart) {
+      setCart(localCart);
+    }
+  }, []);
+
+  let mapOrder = cart.map((product) => {
+    return (
+      <div>
+        <>
+          {product.name} ...... {product.price}
+        </>
+      </div>
+    );
+  });
+
+  let totalQty = () => {
+    cart.map((product) => {});
+    return cart.length;
+  };
+
+  let subtotal = () => {
+    let sum = 0;
+    cart.map((product) => {
+      sum = sum + +product.price;
+    });
+    return <>${sum}</>;
+  };
+
+  let tax = () => {
+    let sum = 0;
+    cart.map((product) => {
+      sum = sum + +product.price;
+    });
+    tax = (sum * 0.1).toFixed(2);
+    return <>${tax}</>;
+  };
+
+  let totalPrice = () => {
+    let sum = 0;
+    cart.map((product) => {
+      sum = sum + +product.price;
+    });
+    let tax = sum * 0.1;
+    let total = (+tax + +sum).toFixed(2);
+    return <>${total}</>;
+  };
 
   function goBackHandle() {
     history.goBack();
@@ -28,63 +83,64 @@ const ReviewOrder = () => {
 
   return (
     <div className="reviewOrder">
-      <i class="angle left icon" onClick={goBackHandle}>
+      <i className="angle left icon" onClick={goBackHandle}>
         Back
       </i>
       <div className="reviewDiv">
-        <h2 className="reviewH2">Order Summary</h2>
+        <h2 className="reviewH2" style={{ paddingBottom: ".75em" }}>
+          Order Summary
+        </h2>
+        {/* *********** */}
         <div className="reviewRow">
-          <div className="reviewSec">
-            <div className="reviewAddress">
-              <h4 className="reviewH4">Address: </h4>
-            </div>
-            <div className="reviewAddress">
-              <p className="reviewP">
-                {`${location.state.firstName} ${location.state.lastName}`}
-              </p>
-              <p className="reviewP">{location.state.company}</p>
-              <p className="reviewP">{`${handlePhoneNum()}`}</p>
-              <p className="reviewP">
-                {`${location.state.address}${handleAddress2()}`}
-              </p>
-              <p className="reviewP">
-                {`${location.state.city}, ${location.state.state}, 
+          <h4 className="reviewH4">Address: </h4>
+
+          <p className="reviewP">
+            {`${location.state.firstName} ${location.state.lastName}`}
+            {location.state.company ? `, ${location.state.company}` : ""}
+            <br />
+            {`${handlePhoneNum()}`}
+            <br />
+            {`${location.state.address}${handleAddress2()}`}
+
+            <br />
+            {`${location.state.city}, ${location.state.state}, 
                 ${location.state.zipCode}, ${location.state.country}`}
-              </p>
-            </div>
-          </div>
+          </p>
         </div>
+        {/* *********** */}
         <div className="reviewRow">
-          <div className="reviewSec">
-            <p>merchandise pic</p>
-            <div className="reviewCol">
-              <p className="reviewP">merchandise name</p>
-              <p className="reviewP">merchandise quantity</p>
-              <p className="reviewP">merchandise price</p>
-            </div>
-          </div>
+          <h4 className="reviewH4">Items: </h4>
+          <p className="reviewP">{mapOrder}</p>
         </div>
+        {/* *********** */}
         <div className="reviewRow">
-          <div className="reviewSec">
-            <h4 className="reviewH4">Subtotal:</h4>
-            <p className="reviewP">Subtotal</p>
-          </div>
-          <div className="reviewSec">
-            <h4 className="reviewH4">Shipping: </h4>
-            <p className="reviewP">Shipping Value</p>
-          </div>{" "}
-          <div className="reviewSec">
-            <h4 className="reviewH4">Taxes:</h4>
-            <p className="reviewP">Taxes Value</p>
-          </div>{" "}
-          <div className="reviewSec">
-            <h4 className="reviewH4">Total:</h4>
-            <p className="reviewP">Total Value</p>
-          </div>
+          <h4 className="reviewH4">Total Quantity: </h4>
+          <p className="reviewP">{totalQty()}</p>
+        </div>
+        {/* *********** */}
+        <div className="reviewRow">
+          <h4 className="reviewH4">SubTotal: </h4>
+          <p className="reviewP">{subtotal()}</p>
+        </div>
+        {/* *********** */}
+        <div className="reviewRow">
+          <h4 className="reviewH4">Shipping: </h4>
+          <p className="reviewP">$10</p>
+        </div>
+        {/* *********** */}
+        <div className="reviewRow">
+          <h4 className="reviewH4">Tax: </h4>
+          <p className="reviewP">{tax()}</p>
+        </div>
+        {/* *********** */}
+        <div className="reviewRow">
+          <h4 className="reviewH4">Total: </h4>
+          <p className="reviewP">{totalPrice()}</p>
         </div>
       </div>
+
       <div className="reviewBtnDiv">
-        <Link to="/ReviewOrder" className="reviewLink">
+        <Link to="/OrderConfirmation" className="reviewLink">
           <button className="reviewBtn">Submit Order</button>
         </Link>
       </div>
